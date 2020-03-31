@@ -5,7 +5,7 @@ class ExpensesController < ApplicationController
       if params[:category_id] == "2" || params[:category_id] == "3"
         @expenses = []
       end
-    elsif params[:concept] == "gasolina" && params[:category_id] == "2"
+    elsif params[:concept] == "Gasolina" && params[:category_id] == "2"
       @expenses = Expense.where(category_id: 2)
     elsif params[:category_id] == "3"
       @expenses = Expense.where(category_id: 3)
