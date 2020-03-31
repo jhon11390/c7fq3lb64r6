@@ -3,7 +3,7 @@ class ExpensesController < ApplicationController
     if params[:concept] == "burral"
       @expenses = Expense.where(category_id: 1)
       if params[:category_id] == "2" || params[:category_id] == "3"
-        @expenses = Expense.where(category_id: 0)
+        @expenses = []
       end
     elsif params[:concept] == "gasolina" && params[:category_id] == "2"
       @expenses = Expense.where(category_id: 2)
