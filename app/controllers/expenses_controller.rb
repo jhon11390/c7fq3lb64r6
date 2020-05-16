@@ -1,4 +1,5 @@
 class ExpensesController < ApplicationController
+  before_action :authenticate_user!
   def index
     if params[:concept] == "burral"
       @expenses = Expense.where(category_id: 1)
